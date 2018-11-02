@@ -1,5 +1,6 @@
 var express = require("express");
-var path = require("path");
+// var path = require("path");
+var friendProfiles = require("./app/data/friends.js");
 
 var app = express();
 var PORT = process.env.PORT || 3000;
@@ -19,6 +20,8 @@ app.listen(PORT, function() {
   });
   
 
-// console.log(Friends);
+console.log(friendProfiles);
 
 // console.log(api + html);
+
+// find differences between each friends score for EACH question
