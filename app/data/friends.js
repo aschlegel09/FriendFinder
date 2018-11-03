@@ -1,20 +1,26 @@
-// Constructor function for creating friends objects
-var Friends = function(name, image) {
-  this.name = name;
-  this.image = image;
-  this.rating = rating;
+var friendsArray = {
+  name: "Andy",
+  imageUrl: "https://avatars3.githubusercontent.com/u/28871636?s=400&u=591c758dba923b7dc96247dca87aea59c11c4dcd&v=4",
+  scores: [1, 2, 3, 4, 5, 1, 2, 3, 4, 5]
+}
 
-  // Prints out slightly different information about a cast member based on their rating
-  this.readProfile = function() {
-      console.log(this.name + this.image + this.rating);
-  };
-  this.addFriend = function(name, image, rating) {
-    this.name.push(new Friends(name, image, rating));
-  };
-};
+// // Exporting our Friend array. We will require it in server.js
+module.exports = friendsArray;
 
-// CRUD HERE
+// // Constructor function for creating friends objects
+// var Friends = function(name, image) {
+//   this.name = name;
+//   this.imageUrl = imageUrl;
+//   this.scores = scores;
 
-// Exporting our Friend constructor. We will require it in server.js
-module.exports = Friends;
+//   // Prints out slightly different i0nformation
+//   this.readProfile = function() {
+//       console.log(this.name + this.imageUrl + this.scores);
+//   };
+//   this.addFriend = function(name, imageUrl, scores) {
+//     this.name.push(new Friends(name, imageUrl, scores));
+//   };
+// };
+
+// // CRUD HERE
 
