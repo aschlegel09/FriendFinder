@@ -2,274 +2,210 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <title>FriendFinder9000.io</title>
-
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
-    <script src="https://code.jquery.com/jquery.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
-
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.1/css/font-awesome.min.css">
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/chosen/1.5.1/chosen.css">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/chosen/1.5.1/chosen.jquery.min.js"></script>
 
     <style>img.chromoji { width:1.2em !important; height:1.2em !important; }.chromoji-font, #chromoji-font { font-size:1.2em !important; }</style>
+    <meta charset="UTF-8">
+    <title>FriendFinder9000.io</title>
 </head>
 
-
-<body>
+<body style="margin-bottom: 100px">
 
     <div class="container">
-
         <h2>Survey Questions</h2>
         <hr>
-
         <h3><strong>About You</strong></h3>
         <h4>Name (Required)</h4>
         <input type="text" id="name-input" class="form-control" required="" data-emoji_font="true" style="font-family: &quot;Helvetica Neue&quot;, Helvetica, Arial, sans-serif, &quot;Segoe UI Emoji&quot;, &quot;Segoe UI Symbol&quot;, Symbola, EmojiSymbols !important;">
 
         <h4>Link to Photo Image (Required)</h4>
         <input type="text" id="image-input" class="form-control" required="" data-emoji_font="true" style="font-family: &quot;Helvetica Neue&quot;, Helvetica, Arial, sans-serif, &quot;Segoe UI Emoji&quot;, &quot;Segoe UI Symbol&quot;, Symbola, EmojiSymbols !important;">
+        <hr>
+        <div class="row">
+            <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6">
+                <h3><strong>Question 1:</strong></h3>
+                <h4>When you disagree with someone, do you voice your opinion?</h4>
+                <!--Emotional Reaction-->
+                <select class="form-control" id="q1" style="display: hidden;">
+                    <option value=""></option>
+                    <option value="1">1 (Strongly Disagree)</option>
+                    <option value="2">2</option>
+                    <option value="3" select="btn-default">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5 (Strongly Agree)</option>
+                </select>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6">
+                <h3><strong>Question 2</strong></h3>
+                <h4>Do you look both ways when crossing the road?</h4>
+                <!--Decision Making-->
+                <select class="form-control" id="q2" style="display: hidden;">
+                    <option value=""></option>
+                    <option value="1">1 (Strongly Disagree)</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5 (Strongly Agree)</option>
+                </select>
+            </div>
+        </div>
 
+        <div class="row">
+            <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6">
+                <h3><strong>Question 3</strong></h3>
+                <h4>Do you call family members as often as you can?</h4>
+                <!--Family -->
+                <select class="form-control" id="q3" style="display: hidden;">
+                    <option value=""></option>
+                    <option value="1">1 (Strongly Disagree)</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5 (Strongly Agree)</option>
+                </select>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6">
+                <h3><strong>Question 4</strong></h3>
+                <h4>Is finding a fulfilling job more important to you than the salary?</h4><!-- Life v Wealth-->
+                <select class="form-control" id="q4" style="display: hidden;">
+                    <option value=""></option>
+                    <option value="1">1 (Strongly Disagree)</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5 (Strongly Agree)</option>
+                </select>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6">
+                <h3><strong>Question 5</strong></h3>
+                <h4>If someone you don't know is offering you help, do you take it?</h4>
+                <!--Dependency-->
+                <select class="form-control" id="q5" style="display: hidden;">
+                    <option value=""></option>
+                    <option value="1">1 (Strongly Disagree)</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5 (Strongly Agree)</option>
+                </select>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6">
+                <h3><strong>Question 6</strong></h3>
+                <h4>Are you always capable of suppressing road rage?</h4>
+                <!--Driving -->
+                <select class="form-control" id="q6" style="display: hidden;">
+                    <option value=""></option>
+                    <option value="1">1 (Strongly Disagree)</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5 (Strongly Agree)</option>
+                </select>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6">
+                <h3><strong>Question 7</strong></h3>
+                <h4>Do you make financial investment decisions based on thorough research?</h4>
+                <!--Money -->
+                <select class="form-control" id="q7" style="display: hidden;">
+                    <option value=""></option>
+                    <option value="1">1 (Strongly Disagree)</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5 (Strongly Agree)</option>
+                </select>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6">
+                <h3><strong>Question 8</strong></h3>
+                <h4>Do you think before you speak?</h4>
+                <!--Thoughtfulness-->
+                <select class="form-control" id="q8" style="display: hidden;">
+                    <option value=""></option>
+                    <option value="1">1 (Strongly Disagree)</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5 (Strongly Agree)</option>
+                </select>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6">
+                <h3><strong>Question 9</strong></h3>
+                <h4>Are your accomplishments just as good as the next person's accomplishments?</h4><!-- Personal Achievement-->
+                <select class="form-control" id="q9" style="display: hidden;">
+                    <option value=""></option>
+                    <option value="1">1 (Strongly Disagree)</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5 (Strongly Agree)</option>
+                </select>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6">
+                <h3><strong>Question 10</strong></h3>
+                <h4>Is "staying in the loop" unimportant to you?</h4>
+                <!--Inclusion-->
+                <select class="form-control" id="q10" style="display: hidden;">
+                    <option value=""></option>
+                    <option value="1">1 (Strongly Disagree)</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5 (Strongly Agree)</option>
+                </select>
+            </div>
+        </div>
+        <br>
+        <br>
+        <div class="row">
+            <div class="col-lg-8">
+                <button type="submit" class="btn btn-primary btn-lg btn-block" id="submit">
+                    Submit <i class="fa fa-check-circle" aria-hidden="true"></i>
+                </button>
+            </div>
+        </div>
         <hr>
 
-        <h3><strong>Question 1:</strong></h3>
-        <h4>When you disagree with someone, do you voice your opinion?</h4>
-        <!--Emotional Reaction-->
-        <select class="chosen-select" id="q1" style="display: none;">
-            <option value=""></option>
-            <option value="1">1 (Strongly Disagree)</option>
-            <option value="2">2</option>
-            <option value="3">3</option>
-            <option value="4">4</option>
-            <option value="5">5 (Strongly Agree)</option>
-        </select>
-
-
-        <div class="chosen-container chosen-container-single chosen-with-drop" style="width: 157px;" title id="q1_chosen">
-            <a class="chosen-single">
-                <span>Select an Option</span>
-                <div>
-                    <b></b>
-                </div>
-            </a>
-            <div class="chosen-drop">
-                <div class="chosen-search"><input type="text" autocomplete="off"></div>
-                <ul class="chosen-results"></ul>
+        <footer class="footer">
+            <div class="container">
+                <p><a href="/api/friends" target="_blank">API Friends Link</a> |
+                    <a href="https://github.com/aschlegel09/FriendFinder" target="_blank">GitHub Repo</a>
+                </p>
             </div>
-        </div>
-
-
-
-        <h3><strong>Question 2</strong></h3>
-        <h4>Do you look both ways when crossing the road?</h4>
-        <!--Decision Making-->
-        <select class="chosen-select" id="q2" style="display: none;">
-            <option value=""></option>
-            <option value="1">1 (Strongly Disagree)</option>
-            <option value="2">2</option>
-            <option value="3">3</option>
-            <option value="4">4</option>
-            <option value="5">5 (Strongly Agree)</option>
-        </select>
-        <div class="chosen-container chosen-container-single" style="width: 157px;" title="" id="q2_chosen"><a class="chosen-single"><span>Select
-                    an Option</span>
-                <div><b></b></div>
-            </a>
-            <div class="chosen-drop">
-                <div class="chosen-search"><input type="text" autocomplete="off"></div>
-                <ul class="chosen-results"></ul>
-            </div>
-        </div>
-
-
-        <h3><strong>Question 3</strong></h3>
-        <h4>Do you call family members as often as you can?</h4>
-        <!--Family -->
-        <select class="chosen-select" id="q3" style="display: none;">
-            <option value=""></option>
-            <option value="1">1 (Strongly Disagree)</option>
-            <option value="2">2</option>
-            <option value="3">3</option>
-            <option value="4">4</option>
-            <option value="5">5 (Strongly Agree)</option>
-        </select>
-        <div class="chosen-container chosen-container-single" style="width: 157px;" title="" id="q3_chosen"><a class="chosen-single"><span>Select
-                    an Option</span>
-                <div><b></b></div>
-            </a>
-            <div class="chosen-drop">
-                <div class="chosen-search"><input type="text" autocomplete="off"></div>
-                <ul class="chosen-results"></ul>
-            </div>
-        </div>
-
-
-        <h3><strong>Question 4</strong></h3>
-        <h4>Is finding a fulfilling job more important to you than the salary?</h4><!-- Life v Wealth-->
-        <select class="chosen-select" id="q4" style="display: none;">
-            <option value=""></option>
-            <option value="1">1 (Strongly Disagree)</option>
-            <option value="2">2</option>
-            <option value="3">3</option>
-            <option value="4">4</option>
-            <option value="5">5 (Strongly Agree)</option>
-        </select>
-        <div class="chosen-container chosen-container-single" style="width: 157px;" title="" id="q4_chosen"><a class="chosen-single"><span>Select
-                    an Option</span>
-                <div><b></b></div>
-            </a>
-            <div class="chosen-drop">
-                <div class="chosen-search"><input type="text" autocomplete="off"></div>
-                <ul class="chosen-results"></ul>
-            </div>
-        </div>
-
-
-        <h3><strong>Question 5</strong></h3>
-        <h4>If someone you don't know is offering you help, do you take it?</h4>
-        <!--Dependency-->
-        <select class="chosen-select" id="q5" style="display: none;">
-            <option value=""></option>
-            <option value="1">1 (Strongly Disagree)</option>
-            <option value="2">2</option>
-            <option value="3">3</option>
-            <option value="4">4</option>
-            <option value="5">5 (Strongly Agree)</option>
-        </select>
-        <div class="chosen-container chosen-container-single" style="width: 157px;" title="" id="q5_chosen"><a class="chosen-single"><span>Select
-                    an Option</span>
-                <div><b></b></div>
-            </a>
-            <div class="chosen-drop">
-                <div class="chosen-search"><input type="text" autocomplete="off"></div>
-                <ul class="chosen-results"></ul>
-            </div>
-        </div>
-
-
-        <h3><strong>Question 6</strong></h3>
-        <h4>Are you always capable of suppressing road rage?</h4>
-        <!--Driving -->
-        <select class="chosen-select" id="q6" style="display: none;">
-            <option value=""></option>
-            <option value="1">1 (Strongly Disagree)</option>
-            <option value="2">2</option>
-            <option value="3">3</option>
-            <option value="4">4</option>
-            <option value="5">5 (Strongly Agree)</option>
-        </select>
-        <div class="chosen-container chosen-container-single" style="width: 157px;" title="" id="q6_chosen"><a class="chosen-single"><span>Select
-                    an Option</span>
-                <div><b></b></div>
-            </a>
-            <div class="chosen-drop">
-                <div class="chosen-search"><input type="text" autocomplete="off"></div>
-                <ul class="chosen-results"></ul>
-            </div>
-        </div>
-
-
-        <h3><strong>Question 7</strong></h3>
-        <h4>Do you make financial investment decisions based on thorough research?</h4>
-        <!--Money -->
-        <select class="chosen-select" id="q7" style="display: none;">
-            <option value=""></option>
-            <option value="1">1 (Strongly Disagree)</option>
-            <option value="2">2</option>
-            <option value="3">3</option>
-            <option value="4">4</option>
-            <option value="5">5 (Strongly Agree)</option>
-        </select>
-        <div class="chosen-container chosen-container-single" style="width: 157px;" title="" id="q7_chosen"><a class="chosen-single"><span>Select
-                    an Option</span>
-                <div><b></b></div>
-            </a>
-            <div class="chosen-drop">
-                <div class="chosen-search"><input type="text" autocomplete="off"></div>
-                <ul class="chosen-results"></ul>
-            </div>
-        </div>
-
-        <h3><strong>Question 8</strong></h3>
-        <h4>Do you think before you speak?</h4>
-        <!--Thoughtfulness-->
-        <select class="chosen-select" id="q8" style="display: none;">
-            <option value=""></option>
-            <option value="1">1 (Strongly Disagree)</option>
-            <option value="2">2</option>
-            <option value="3">3</option>
-            <option value="4">4</option>
-            <option value="5">5 (Strongly Agree)</option>
-        </select>
-        <div class="chosen-container chosen-container-single" style="width: 157px;" title="" id="q8_chosen"><a class="chosen-single"><span>Select
-                    an Option</span>
-                <div><b></b></div>
-            </a>
-            <div class="chosen-drop">
-                <div class="chosen-search"><input type="text" autocomplete="off"></div>
-                <ul class="chosen-results"></ul>
-            </div>
-        </div>
-
-        <h3><strong>Question 9</strong></h3>
-        <h4>Are your accomplishments just as good as the next person's accomplishments?</h4><!-- Personal Achievement-->
-        <select class="chosen-drop" id="q9" style="display: none;">
-            <option value=""></option>
-            <option value="1">1 (Strongly Disagree)</option>
-            <option value="2">2</option>
-            <option value="3">3</option>
-            <option value="4">4</option>
-            <option value="5">5 (Strongly Agree)</option>
-        </select>
-        <div class="chosen-container chosen-container-single" style="width: 157px;" title="" id="q9_chosen"><a class="chosen-single"><span>Select
-                    an Option</span>
-                <div><b></b></div>
-            </a>
-            <div class="chosen-drop">
-                <div class="chosen-search"><input type="text" autocomplete="off"></div>
-                <ul class="chosen-results"></ul>
-            </div>
-        </div>
-
-        <h3><strong>Question 10</strong></h3>
-        <h4>Is "staying in the loop" unimportant to you?</h4>
-        <!--Inclusion-->
-        <div class="chosen-drop chosen-container chosen-container-single" aria-placeholder="Select">
-            <select class="chosen-select" id="q10" style="display: hidden;">
-                <option value=""></option>
-                <option value="1">1 (Strongly Disagree)</option>
-                <option value="2">2</option>
-                <option value="3">3</option>
-                <option value="4">4</option>
-                <option value="5">5 (Strongly Agree)</option>
-            </select>
-        </div>
-
-    <br>
-    <br>
-
-    <!-- Submit Button -->
-    <button type="submit" class="btn btn-primary btn-lg btn-block" id="submit"><i class="fa fa-check-circle"
-            aria-hidden="true"></i>Submit</button>
-    <hr>
-
-    <footer class="footer">
-        <div class="container">
-            <p><a href="/api/friends" target="_blank">API Friends Link</a> |
-                <a href="https://github.com/aschlegel09/FriendFinder" target="_blank">GitHub Repo</a>
-            </p>
-        </div>
-    </footer>
+            <br><br>
+        </footer>
 
     </div>
 
-    <!-- Modal -->
     <div id="results-modal" class="modal fade" role="dialog">
         <div class="modal-dialog">
-
-            <!-- Modal content-->
             <div class="modal-content">
                 <div class="modal-header">
                     <button type="button" class="close" data-dismiss="modal">×</button>
@@ -283,68 +219,58 @@
                     <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
                 </div>
             </div>
-
         </div>
     </div>
 
+    <script type="text/javascript">
+        $("#submit").on("click", function (event) {
+            event.preventDefault();
+
+            console.log("Button Clicked");
+
+            function validateForm() {
+
+                var isValid = true;
+                $(".form-control").each(function () {
+                    if ($(this).val() === "") {
+                        isValid = false;
+                    }
+                });
+                return isValid;
+            }
+
+            if (validateForm()) {
+                var newFriend = {
+                    name: $("#name-input").val(),
+                    imageUrl: $("#image-input").val(),
+                    scores: [
+                        $("#q1").val(),
+                        $("#q2").val(),
+                        $("#q3").val(),
+                        $("#q4").val(),
+                        $("#q5").val(),
+                        $("#q6").val(),
+                        $("#q7").val(),
+                        $("#q8").val(),
+                        $("#q9").val(),
+                        $("#q10").val()
+                    ]
+                };
+
+                $.post("/api/friends", newFriend)
+                    .then(function (data) {
+                        console.log("survey.html", data);
+                        console.log(newFriend);
+                        alert("Adding new Friend...");
+                        $("#match-name").text(data.name)
+                        $("#match-img").attr("src", data.imageUrl)
+                        
+                    })                
+            } else {
+                alert("Please fill out all fields before submitting!");
+            }
+        });
+    </script>
 </body>
 
 </html>
-
-<!-- BELOW CODE IS CRITICAL. IT HANDLES HOW FORM DATA IS SENT TO OUR SERVER -->
-<script type="text/javascript">
-    // In this code below we create the Front-end JavaScript which "POSTS" our form data to our express server.
-    // In essence, when the user hits submit, jQuery grabs all of the fields then sends a post request to our api
-    // Our api recognizes the route (/api/friends)... and then runs the associated code (found in api-routes.js).
-    // In this case the associated code "saves" the data to the table-data.js file or waitinglist-data.js file
-
-    $(".submit").on("click", function (event) {
-        event.preventDefault();
-
-        // Here we grab the form elements
-        var newFriend = {
-            name: $("#name-input").val().trim(),
-            imageUrl: $("#image-input").val().trim(),
-            scores: [
-                q1 = $("#q1").val().trim(),
-                q2 = $("#q2").val().trim(),
-                q3 = $("#q3").val().trim(),
-                q4 = $("#q4").val().trim(),
-                q5 = $("#q5").val().trim(),
-                q6 = $("#q6").val().trim(),
-                q7 = $("#q7").val().trim(),
-                q8 = $("#q8").val().trim(),
-                q9 = $("#q9").val().trim(),
-                q10 = $("#q10").val().trim(),
-            ]
-        };
-
-        console.log(newFriend);
-
-        // This line is the magic. It"s very similar to the standard ajax function we used.
-        // Essentially we give it a URL, we give it the object we want to send, then we have a "callback".
-        // The callback is the response of the server. In our case, we set up code in api-routes that "returns" true or false
-        // depending on if a friend is a match or not.
-
-        $.post("/api/friends", newFriend, function (data) {
-            if (data) {
-                alert("Your information was collected succesfully!");
-            }
-            else {
-                alert("Sorry you're missing something..");
-            }
-            // Clear the form when submitting
-            $("#name-input").val("");
-            $("#image-input").val("");
-            $("#q1").val("");
-            $("#q2").val("");
-            $("#q3").val("");
-            $("#q4").val("");
-            $("#q5").val("");
-            $("#q6").val("");
-            $("#q7").val("");
-            $("#q8").val("");
-            $("#q9").val("");
-            $("#q10").val("");
-        });
-    });
